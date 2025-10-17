@@ -1,6 +1,4 @@
-python-3.12.6
 fastapi==0.104.1
 uvicorn==0.24.0
 python-multipart==0.0.6
 SQLAlchem
-sqlalchemy==2.0.23
