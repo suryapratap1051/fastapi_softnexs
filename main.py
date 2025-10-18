@@ -171,5 +171,8 @@ async def admin_dashboard(request: Request):
     return templates.TemplateResponse("admin.html", {"request": request})
 
 if __name__ == "__main__":
+    import os
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+
+    port = int(os.environ.get("PORT", 8000))  # Use Render's port or fallback to 8000 for local
+    uvicorn.run(app, host="0.0.0.0", port=port)
